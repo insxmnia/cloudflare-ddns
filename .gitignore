@@ -23,3 +23,5 @@
 # Build output
 /build/
 
+# Go-Init script
+directories.info
