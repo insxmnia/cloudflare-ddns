@@ -1,0 +1,42 @@
+Golang Project Directory Structure for: cloudflare-ddns
+===================================================
+
+Directory: deployments
+Description: Contains deployment configurations and infrastructure-as-code files (e.g., Kubernetes YAML files, Terraform scripts).
+
+Directory: docs
+Description: Contains project documentation, such as user guides, architecture overviews, and API documentation.
+
+Directory: api
+Description: Holds API definitions, such as OpenAPI specs, gRPC proto files, or API versioning handlers.
+
+Directory: web
+Description: Contains web assets such as HTML, CSS, JavaScript, or frontend code if applicable.
+
+Directory: internal/app
+Description: Contains application-specific code and business logic.
+
+Directory: build
+Description: Holds the output binaries and artifacts generated during the build process.
+
+Directory: cmd
+Description: Holds the entry points for the application (e.g., main programs). Each subdirectory represents a different command.
+
+Directory: internal
+Description: Holds private application and library code that is not meant to be accessible outside the project.
+
+Directory: internal/pkg
+Description: Contains reusable code within the project that should remain private and inaccessible to external modules.
+
+Directory: scripts
+Description: Stores automation scripts, such as build, test, and deployment scripts.
+
+Directory: pkg
+Description: Contains reusable packages that can be used by the project and external applications. Intended for public use.
+
+Directory: config
+Description: Stores configuration files or related utilities for loading and parsing configuration.
+
+Directory: test
+Description: Contains additional test data, mocks, or integration test cases.
+
