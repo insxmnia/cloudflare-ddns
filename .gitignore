@@ -22,3 +22,6 @@
 
 # Build output
 /build/
+
+# Ignore empty directories
+*/
