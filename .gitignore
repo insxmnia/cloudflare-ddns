@@ -10,6 +10,10 @@
 /bin/
 /vendor/
 
+# Configuration Files
+.env
+config.yaml
+
 # IDE and editor files
 .vscode/
 .idea/

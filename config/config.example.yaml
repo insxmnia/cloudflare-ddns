@@ -1,0 +1,6 @@
+domains: ["example.com"]
+sub-domains: 
+  example: ["www", "api"]
+credentials: 
+  email: "info@example.com"
+  key: "cloudflare-key"

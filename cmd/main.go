@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cloudflare-ddns/internal/app"
 	"cloudflare-ddns/pkg/config"
 	"cloudflare-ddns/pkg/slogger"
 	"os"
@@ -14,4 +15,6 @@ func main() {
 
 	slogger.Info("Starting Cloudflare DDNS...")
 	config.InitConfig("config", []string{"/config/", "config", dir + "/config"}, map[string]any{})
+
+	app.Start()
 }
