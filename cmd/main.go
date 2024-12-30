@@ -1,7 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"cloudflare-ddns/internal/app"
+	"cloudflare-ddns/pkg/config"
+	"cloudflare-ddns/pkg/slogger"
+	"os"
+)
 
 func main() {
-    fmt.Println("Hello, World!")
+	dir, err := os.Getwd()
+	if err != nil {
+		slogger.Fatal("Failed to get current working directory: %v", err)
+	}
+
+	slogger.Info("Starting Cloudflare DDNS...")
+	config.InitConfig("config", []string{"/config/", "config", dir + "/config"}, map[string]any{})
+
+	app.Start()
 }
