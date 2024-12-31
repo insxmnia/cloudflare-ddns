@@ -58,15 +58,14 @@ func Start() {
 			// Update the root DNS record (domain name)
 			if ok, record := dns_records.Includes(domain); ok {
 				slogger.Info("Cloudflare DDNS", "subdomain", record.Name, "ip", record.IP)
-				if record.IP == public_ip {
-					return
+				if record.IP != public_ip {
+					slogger.Info("Cloudflare DDNS", "updating", record.Name, "to", public_ip)
+					err := cloudflare.UpdateRecord(domain_id, record.ID, public_ip)
+					if err.Message != "" {
+						slogger.Error("cloudflare", "error", err.Message, "error-code", err.Code)
+					}
+					slogger.Info("Cloudflare DDNS", "updated", record.Name, "to", public_ip)
 				}
-				slogger.Info("Cloudflare DDNS", "updating", record.Name, "to", public_ip)
-				err := cloudflare.UpdateRecord(domain_id, record.ID, public_ip)
-				if err.Message != "" {
-					slogger.Error("cloudflare", "error", err.Message, "error-code", err.Code)
-				}
-				slogger.Info("Cloudflare DDNS", "updated", record.Name, "to", public_ip)
 			} else {
 				slogger.Info("Cloudflare DDNS", "subdomain", domain, "status", "not found")
 			}
