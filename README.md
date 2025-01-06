@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&height=260&color=0:61D47F,100:6AC963&text=Cloudflare%20DDNS&reversal=false&section=header&textBg=false&fontColor=FFFFFF&fontAlign=40&fontAlignY=30&desc=Cloudflare%20Dynamic%20DNS&descAlign=40&descAlignY=50)
+![header](https://capsule-render.vercel.app/api?type=waving&height=260&color=0:61D47F,100:6AC963&text=Cloudflare%20DDNS&reversal=false&section=header&textBg=false&fontColor=FFFFFF&fontAlign=40&fontAlignY=30&desc=Cloudflare%20Dynamic%20DNS%20Service&descAlign=40&descAlignY=50)
 
 ## Project Purpose
 This project is a Go-based Dynamic DNS (DDNS) client for Cloudflare. It automatically updates DNS records in Cloudflare when the IP address changes, keeping your domain pointing to the correct IP.
