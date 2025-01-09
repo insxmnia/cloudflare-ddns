@@ -2,7 +2,7 @@
 
 ## Project Purpose
 This project is a Go-based Dynamic DNS (DDNS) client for Cloudflare. It automatically updates DNS records in Cloudflare when the IP address changes, keeping your domain pointing to the correct IP.
-
+ 
 ## Table of Contents
 See below for quicker & direct access to specific information
 <br>
